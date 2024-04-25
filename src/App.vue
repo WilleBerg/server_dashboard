@@ -6,14 +6,15 @@ export default {
   components: {
     Service
   },
-  data () {
+  data() {
     return {
-      services: [ 
-        { name: "Torrent client", ip: config.torrent},
-        { name: "Last fm scrobbler", ip: config.lfm},
-        { name: "Jellyfin", ip: config.jellyfin},
-        { name: "Plex", ip: config.plex},
-    ]
+      services: [
+        { name: "Torrent client", ip: config.torrent },
+        { name: "Last fm scrobbler", ip: config.lfm },
+        { name: "Jellyfin", ip: config.jellyfin },
+        { name: "Plex", ip: config.plex },
+        { name: "Pihole", ip: config.pihole }
+      ]
     }
   }
 }
@@ -23,9 +24,8 @@ export default {
   <header>
     <li v-for="service in this.services">
       <Service :ip="service.ip" :name="service.name" />
-    </li> 
+    </li>
   </header>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
