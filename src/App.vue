@@ -13,7 +13,10 @@ export default {
         { name: "Last fm scrobbler", ip: config.lfm },
         { name: "Jellyfin", ip: config.jellyfin },
         { name: "Plex", ip: config.plex },
-        { name: "Pihole", ip: config.pihole }
+        { name: "Pihole", ip: config.pihole },
+        { name: "Sonarr", ip: config.base + config.sonarr },
+        { name: "Radarr", ip: config.base + config.radarr },
+        { name: "Bazarr", ip: config.base + config.bazarr }
       ]
     }
   }
