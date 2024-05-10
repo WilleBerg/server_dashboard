@@ -16,7 +16,9 @@ export default {
         { name: "Pihole", ip: config.pihole },
         { name: "Sonarr", ip: config.base + config.sonarr },
         { name: "Radarr", ip: config.base + config.radarr },
-        { name: "Bazarr", ip: config.base + config.bazarr }
+        { name: "Bazarr", ip: config.base + config.bazarr },
+        { name: "Prowlarr", ip: config.base + config.prowlarr },
+
       ]
     }
   }
