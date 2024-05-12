@@ -1,10 +1,12 @@
 <script>
 import Service from './components/Service.vue';
+import SearchBar from './components/SearchBar.vue';
 import config from "../server_dashboard.json";
 
 export default {
   components: {
-    Service
+    Service,
+    SearchBar
   },
   data() {
     return {
@@ -27,9 +29,12 @@ export default {
 
 <template>
   <header>
-    <li v-for="service in this.services">
-      <Service :ip="service.ip" :name="service.name" />
-    </li>
+    <SearchBar />
+    <div>
+      <li v-for="service in this.services">
+        <Service :ip="service.ip" :name="service.name" />
+      </li>
+    </div>
   </header>
 </template>
 
