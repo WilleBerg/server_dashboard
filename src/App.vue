@@ -2,6 +2,7 @@
 import Service from './components/Service.vue';
 import SearchBar from './components/SearchBar.vue';
 import config from "../server_dashboard.json";
+import qbit from "./assets/qbit_icon.png";
 
 export default {
   components: {
@@ -11,7 +12,7 @@ export default {
   data() {
     return {
       services: [
-        { name: "Torrent client", ip: config.torrent, icon: "./src/assets/qbit_icon.png" },
+        { name: "Torrent client", ip: config.torrent, icon: qbit },
         { name: "Last fm scrobbler", ip: config.lfm, icon: "./src/assets/lastfm_icon.png" },
         { name: "Jellyfin", ip: config.jellyfin, icon: "./src/assets/jellyfin_icon.png" },
         { name: "Plex", ip: config.plex, icon: "./src/assets/plex_icon.png" },
