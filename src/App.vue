@@ -1,8 +1,16 @@
 <script>
+import prowlarr from "./assets/prowlarr_icon.png";
+import bazarr from "./assets/bazarr_icon.png";
+import radarr from "./assets/radarr_icon.png";
+import sonarr from "./assets/sonarr_icon.png";
+import pihole from "./assets/pihole_icon.png";
+import plex from "./assets/plex_icon.png";
 import Service from './components/Service.vue';
 import SearchBar from './components/SearchBar.vue';
 import config from "../server_dashboard.json";
 import qbit from "./assets/qbit_icon.png";
+import lfm from "./assets/lastfm_icon.png";
+import jellyfin from "./assets/jellyfin_icon.png";
 
 export default {
   components: {
@@ -13,14 +21,14 @@ export default {
     return {
       services: [
         { name: "Torrent client", ip: config.torrent, icon: qbit },
-        { name: "Last fm scrobbler", ip: config.lfm, icon: "./src/assets/lastfm_icon.png" },
-        { name: "Jellyfin", ip: config.jellyfin, icon: "./src/assets/jellyfin_icon.png" },
-        { name: "Plex", ip: config.plex, icon: "./src/assets/plex_icon.png" },
-        { name: "Pihole", ip: config.pihole, icon: "./src/assets/pihole_icon.png" },
-        { name: "Sonarr", ip: config.base + config.sonarr, icon: "./src/assets/sonarr_icon.png" },
-        { name: "Radarr", ip: config.base + config.radarr, icon: "./src/assets/radarr_icon.png" },
-        { name: "Bazarr", ip: config.base + config.bazarr, icon: "./src/assets/bazarr_icon.png" },
-        { name: "Prowlarr", ip: config.base + config.prowlarr, icon: "./src/assets/prowlarr_icon.png" },
+        { name: "Last fm scrobbler", ip: config.lfm, icon: lfm },
+        { name: "Jellyfin", ip: config.jellyfin, icon: jellyfin },
+        { name: "Plex", ip: config.plex, icon: plex },
+        { name: "Pihole", ip: config.pihole, icon: pihole },
+        { name: "Sonarr", ip: config.base + config.sonarr, icon: sonarr },
+        { name: "Radarr", ip: config.base + config.radarr, icon: radarr },
+        { name: "Bazarr", ip: config.base + config.bazarr, icon: bazarr },
+        { name: "Prowlarr", ip: config.base + config.prowlarr, icon: prowlarr },
 
       ]
     }
