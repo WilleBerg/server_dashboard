@@ -1,12 +1,12 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
+/* #app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+} */
+/*
 a,
 .green {
   text-decoration: none;
@@ -32,4 +32,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+}  */

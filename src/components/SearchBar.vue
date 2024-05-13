@@ -25,12 +25,20 @@ export default {
 <template>
     <div class="search" style="margin-bottom: 30px;">
         <form @submit="handleSubmit">
-            <input placeholder="Search duckduckgo" type="text" name="search" v-model="formData.search">
-            <button>
-                Search
-            </button>
+            <input class="form" placeholder="Search duckduckgo" type="text" name="search" v-model="formData.search">
         </form>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.search {
+    display: inline-block;
+    position: relative;
+    background-color: var(--clr-input);
+    border: 1px solid white;
+}
+
+input {
+    padding: 10px 10vw 10px 1vw;
+}
+</style>

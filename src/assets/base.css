@@ -1,86 +1,62 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* --clr-body-bg: #3b4252;
+  --clr-bg: #2E3440;
+  --clr-text: #4C566A; */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --clr-body-bg: var(--frost3);
+  --clr-bg: var(--frost2);
+  --clr-text: var(--frost2);
+  --clr-div:var(--spirited3);
+  --clr-div-border: white;
+  --clr-input: var(--spirited2);
+  --clr-input-div-border: white;
+  --service-image-size: 6vw;
+  --service-image-size-hover: 7vw;
 
-  --vt-c-indigo: #2c3e50;
+  /* Nord frost */
+  --frost0: #8fbcbb;
+  --frost1: #88c0d0;
+  --frost2: #81A1c1;
+  --frost3: #5E81AC;
+  --spirited3: rgba(31, 64, 99, 0.5);
+  --spirited2: #0f455c;
+  --spirited2rgba: rgba(15, 55, 92, 0.5);
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --spirited-diff: #a28648;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+* {
+  /* background-color: var(--clr-bg); */
+  font-family: 'Ubuntu mono', monospace;
 }
 
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body, html {
+  height: 100%;
   margin: 0;
-  font-weight: normal;
 }
 
 body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* background-color: var(--clr-body-bg); */
+  background-image: url(big-papuh.png);
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+a {
+  color: var(--clr-text);
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  background-color: var(--clr-input) !important;
+  border: none;
+  color: var(--clr-text);
+}
+
+input:focus {
+  outline: none;
 }
