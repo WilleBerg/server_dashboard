@@ -19,13 +19,18 @@ export default {
   },
   data() {
     return {
-      services: [
+      services1: [
         { name: "Torrent client", ip: config.torrent, icon: qbit },
         { name: "Last fm scrobbler", ip: config.lfm, icon: lfm },
         { name: "Jellyfin", ip: config.jellyfin, icon: jellyfin },
+      ],
+      services2: [
         { name: "Plex", ip: config.plex, icon: plex },
         { name: "Pihole", ip: config.pihole, icon: pihole },
         { name: "Sonarr", ip: config.base + config.sonarr, icon: sonarr },
+
+      ],
+      services3: [
         { name: "Radarr", ip: config.base + config.radarr, icon: radarr },
         { name: "Bazarr", ip: config.base + config.bazarr, icon: bazarr },
         { name: "Prowlarr", ip: config.base + config.prowlarr, icon: prowlarr },
@@ -37,33 +42,60 @@ export default {
 </script>
 
 <template>
-  <header>
-    <div class="searchbar">
-      <SearchBar />
-    </div>
-    <div class="dashboard-container">
-      <div class="dashboard">
-        <div>
-          <ul class="horizontal-list"> <!-- Add the ul tag here -->
-            <li v-for="service in this.services" class="the_list">
-              <Service :ip="service.ip" :name="service.name" :icon="service.icon" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="searchbar">
+    <SearchBar />
+  </div>
+  <div class="dashboard-container">
+    <template v-for="service in this.services1">
+      <Service :ip="service.ip" :name="service.name" :icon="service.icon" class="item" />
+    </template>
+  </div>
+  <div class="dashboard-container2">
+    <template v-for="service in this.services2">
+      <Service :ip="service.ip" :name="service.name" :icon="service.icon" class="item" />
+    </template>
+  </div>
+  <div class="dashboard-container3">
+    <template v-for="service in this.services3">
+      <Service :ip="service.ip" :name="service.name" :icon="service.icon" class="item" />
+    </template>
+  </div>
 </template>
 
 <style scoped>
 .dashboard-container {
   display: flex;
-  justify-content: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin: 10vh 28vw 0 2vw;
   /* background-color: var(--clr-div); */
-  padding: 2vh 15vh 15vh 15vh;
   border-radius: 1%;
   flex-wrap: wrap;
+  /* width: 33%; */
+  /* border: solid 1px var(--clr-div-border); */
+}
+
+.dashboard-container2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 5vh 28vw 0 2vw;
+  /* background-color: var(--clr-div); */
+  border-radius: 1%;
+  flex-wrap: wrap;
+  /* width: 33%; */
+  /* border: solid 1px var(--clr-div-border); */
+}
+
+.dashboard-container3 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 5vh 28vw 0 2vw;
+  /* background-color: var(--clr-div); */
+  border-radius: 1%;
+  flex-wrap: wrap;
+  /* width: 33%; */
   /* border: solid 1px var(--clr-div-border); */
 }
 
@@ -71,19 +103,49 @@ export default {
   margin: 10vh 0vw 0vh 28vw;
 }
 
-.horizontal-list {
-  padding: 0;
-  margin-left: 3vw;
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  /* Remove default list styles */
+.item {
+  margin: 2dvh 2dvw 2dvh 2dvw;
 }
 
-.the_list {
-  padding: 0;
-  /* Remove default padding */
-  margin: 3vh 5vw 3vh 5vw;
-  /* Remove default margin */
+@media screen and (max-width: 1100px) {
+  .dashboard-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 10vh 2vw 0 2vw;
+    /* background-color: var(--clr-div); */
+    border-radius: 1%;
+    flex-wrap: wrap;
+    /* width: 33%; */
+    /* border: solid 1px var(--clr-div-border); */
+  }
+
+  .dashboard-container2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5vh 2vw 0 2vw;
+    /* background-color: var(--clr-div); */
+    border-radius: 1%;
+    flex-wrap: wrap;
+    /* width: 33%; */
+    /* border: solid 1px var(--clr-div-border); */
+  }
+
+  .dashboard-container3 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5vh 2vw 0 2vw;
+    /* background-color: var(--clr-div); */
+    border-radius: 1%;
+    flex-wrap: wrap;
+    /* width: 33%; */
+    /* border: solid 1px var(--clr-div-border); */
+  }
+
+  .item {
+    margin: 2dvh 2dvw 2dvh 2dvw;
+  }
 }
 </style>
