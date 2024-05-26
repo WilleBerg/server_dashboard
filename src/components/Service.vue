@@ -23,7 +23,7 @@ img:hover {
 }
 </style>
 <template>
-    <a v-bind:href="this.ip" target="_blank">
+    <a v-bind:href="this.ip">
         <img :src="this.icon" />
     </a>
 </template>
